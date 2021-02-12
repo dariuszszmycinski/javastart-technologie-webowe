@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Formularze w HTML</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Formularze">
+    </head>
+    <body>
+        <h1>Zarejestruj się</h1>
+        <form>
+            <fieldset>
+                <legend>Dane konta</legend>
+                <div>
+                    <label for="username">Nazwa użytkownika</label>
+                    <input type="text" id="username">    
+                </div>
+                <div>
+                    <label for="email">Adres e-mail</label>
+                    <input type="email" id="email" placeholder="jan@example.com">     
+                </div>
+                <div>
+                    <label for="pass">Hasło</label>
+                    <input type="password" id="pass">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dane personalne</legend>
+                <div>
+                    <label for="firstName">Imię</label>
+                    <input type="text" id="firstName">
+                </div>
+                <div>
+                    <label for="lastName">Nazwisko</label>
+                    <input type="text" id="lastName">
+                </div>
+                <div>
+                    <label for="age">Wiek</label>
+                    <input type="number" id="age" min="1" max="99" step="1">
+                </div>
+                <div>
+                    <p>Płeć:</p>
+                    <input type="radio" id="male" name="gender" checked>
+                    <label for="male">Mężczyzna</label>
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Kobieta</label>
+                </div>
+            </fieldset>
+            <button>Zarejestruj się</button>
+        </form>
+        <h2>Dodaj nowy przepis</h2>
+        <form>
+            <div>
+                <label for="recipeName" >Nazwa przepisu</label>
+                <input type="text" id="recipeName" placeholder="np. Pierogi" required>
+            </div>
+            <div>
+                <label for="category">Kategoria</label>
+                <select id="category">
+                    <option>Śniadanie</option>
+                    <option>Obiad</option>
+                    <option>Kolacja</option>
+                </select>
+            </div>
+            <div>
+                <label for="tag">Tag</label>
+                <input list="tags" id="tag">
+                <datalist id="tags">
+                    <option value="kurczak"></option>
+                    <option value="vege"></option>
+                    <option value="deser"></option>
+                </datalist>
+            </div>
+            <div>
+                <p><label for="prep">Sposób przygotowania</label></p>
+                <textarea id="prep" cols="30" rows="10"></textarea>
+            </div>
+            <button>Dodaj przepis</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+[href]{
+    color: orange;
+}
+[target="_blank"]{
+    color: red;
+}
+[href*="javastart.pl"]{
+    color: green;
+}
